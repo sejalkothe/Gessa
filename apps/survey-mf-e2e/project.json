@@ -1,0 +1,28 @@
+{
+  "root": "apps/survey-mf-e2e",
+  "sourceRoot": "apps/survey-mf-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/survey-mf-e2e/cypress.json",
+        "devServerTarget": "survey-mf:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "survey-mf:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/survey-mf-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["survey-mf"]
+}

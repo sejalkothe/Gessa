@@ -11,6 +11,7 @@ const ProjectWrapper = () => {
 
   return (
     <div className="flex flex-row overflow-y-hidden">
+      
       <Project />
       <Outlet />
     </div>

@@ -1,6 +1,7 @@
 import MFViewPageApp from './react-remote-app';
-
+import MFSurvey from './survey-mf';
 export { default as ViewPageApp } from './react-remote-app';
+export { default as Survey } from './react-remote-app';
 
 export interface IMicroFrontend {
   url: string;
@@ -22,6 +23,7 @@ export interface IMicroFrontends {
 
 const microFrontends: IMicroFrontends = {
   viewpageApp: MFViewPageApp,
+  survey: MFSurvey
 };
 
 export default microFrontends;

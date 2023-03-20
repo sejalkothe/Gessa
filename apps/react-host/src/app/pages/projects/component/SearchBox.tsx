@@ -3,6 +3,7 @@ import { InputBase, Typography } from '@mui/material';
 import { useTheme } from '@mui/system';
 import themes from 'apps/react-host/src/theme';
 import { useEffect, useState } from 'react';
+
 import './SearchBox.css';
 
 interface IAnyProps {

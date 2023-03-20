@@ -102,29 +102,29 @@ export function Project() {
         page: 0,
         size: 100,
       };
-      // dispatch(getAppMenu(menuParams))
-      //   .then((res: any) => {
-      //     if (res && res.payload && res.payload.data) {
-      //       const sortedArr = JSON.parse(JSON.stringify(res.payload.data));
-      //       if (sortedArr && sortedArr[0].data) {
-      //         if (sortedArr[0].child && sortedArr[0].child.length > 0) {
-      //           navigate(
-      //             `/project/${params.projectId}/${params.menuId || sortedArr[0].data.name
-      //             }/${params.subMenuId || sortedArr[0].child[0].name}`
-      //           );
-      //         } else {
-      //           navigate(
-      //             `/project/${params.projectId}/${params.menuId || sortedArr[0].data.name
-      //             }`
-      //           );
-      //         }
-      //       }
-      //     }
-      //     // setSelectedMenu('page2');
-      //   })
-      //   .catch((reason: any) => {
-      //     //  Todod :
-      //   });
+      dispatch(getAppMenu(menuParams))
+        .then((res: any) => {
+          if (res && res.payload && res.payload.data) {
+            const sortedArr = JSON.parse(JSON.stringify(res.payload.data));
+            if (sortedArr && sortedArr[0].data) {
+              if (sortedArr[0].child && sortedArr[0].child.length > 0) {
+                navigate(
+                  `/project/${params.projectId}/${params.menuId || sortedArr[0].data.name
+                  }/${params.subMenuId || sortedArr[0].child[0].name}`
+                );
+              } else {
+                navigate(
+                  `/project/${params.projectId}/${params.menuId || sortedArr[0].data.name
+                  }`
+                );
+              }
+            }
+          }
+          // setSelectedMenu('page2');
+        })
+        .catch((reason: any) => {
+          //  Todod :
+        });
     }
   }, []);
 

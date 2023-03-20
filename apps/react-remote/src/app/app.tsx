@@ -1,18 +1,15 @@
 import { CssBaseline } from '@mui/material';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { useEffect } from 'react';
-import { HashRouter, Outlet } from 'react-router-dom';
 import {
-  RouteProvider,
-  SettingProvider,
-  ThemeProvider,
   AuthProvider,
   MicroFrontendProvider,
   ReduxProvider,
+  RouteProvider,
+  SettingProvider,
+  ThemeProvider,
 } from '../context';
 import Intermediate from './intermediate';
-import LayoutWrapper from './layout/layout';
-import DemoWrapper from './pages/projects/DemoWrapper';
 export interface IAppProps {
   pageId: string;
   themeObject: any;
@@ -40,6 +37,7 @@ export function App(props: any) {
                   <Intermediate
                     page_id={JSON.parse(JSON.stringify(props)).pageId}
                   />
+                  {/* <h1>Hello World</h1> */}
                   {/* <LayoutWrapper /> */}
                 </StyledEngineProvider>
                 {/* </HashRouter> */}

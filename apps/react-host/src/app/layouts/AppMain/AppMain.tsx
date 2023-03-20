@@ -6,6 +6,7 @@ import { Outlet } from 'react-router';
 import MFViewPageApp from '../../../micro-frontend/remotes/react-remote-app';
 import ViewPageUi from './Page-ui/viewPageUi';
 import { useEffect } from 'react';
+import SurveyUi from './Page-ui/surveyUi';
 
 const Test = () => {
   return <Typography variant="body1">feature3</Typography>;
@@ -33,7 +34,7 @@ const Nest = () => {
 const AppMain = (props: any) => {
   // console.log('page props', props);
   return props && props.pageId && props.pageId.length > 0 ? (
-    <ViewPageUi tabData={props}></ViewPageUi>
+    <SurveyUi tabData={props}></SurveyUi>
   ) : (
     // <>no data</>
     <>no data</>

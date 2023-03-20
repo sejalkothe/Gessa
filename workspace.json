@@ -4,6 +4,8 @@
     "react-host": "apps/react-host",
     "react-host-e2e": "apps/react-host-e2e",
     "react-remote": "apps/react-remote",
-    "react-remote-e2e": "apps/react-remote-e2e"
+    "react-remote-e2e": "apps/react-remote-e2e",
+    "survey-mf": "apps/survey-mf",
+    "survey-mf-e2e": "apps/survey-mf-e2e"
   }
 }

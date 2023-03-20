@@ -1,19 +1,18 @@
-import { Box, useTheme } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
-import AppMain from './AppMain/AppMain';
-import AppMenu from './AppMenu/AppMenu';
-import themes, { ITheme } from '../../theme/index';
+import { Box } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import themes from '../../theme/index';
 // import './Classic.css';
-import childMenuContext from '../pages/projects/component/ChildMenusContext';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectAllMenu } from '../pages/projects/store/appMenuSlice';
-import { useDispatch, useSelector } from 'react-redux';
 import { IRootState } from '../../store';
+import { selectAllMenu } from '../pages/projects/store/appMenuSlice';
 import {
   selectActiveMenuName,
   selectActivePageId,
   selectAllSortedMenuById,
 } from '../pages/projects/store/sortedMenuSlice';
+import AppMain from './AppMain/AppMain';
+import AppMenu from './AppMenu/AppMenu';
 
 function Classic({ right = false }) {
   const theme = themes.default;
@@ -154,10 +153,9 @@ function Classic({ right = false }) {
             overflowY: 'auto',
           }}
         >
+          {/* <h1>Hello</h1> */}
           {/* openpage {selectedPage} {_selectActivePageId} */}
-          {selectedPage && selectedPage !== '' && (
-            <AppMain pageId={selectedPage || _selectActivePageId || ''} />
-          )}
+           <AppMain pageId={'asa'} />
         </Box>
       </Box>
     </div>
